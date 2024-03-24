@@ -4,10 +4,15 @@ import android.opengl.GLES20;
 import android.opengl.GLSurfaceView;
 import android.opengl.Matrix;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
+//import androidx.annotation.Nullable;  
+//import androidx.appcompat.app.AppCompatActivity;
 import android.widget.CompoundButton;
 import android.widget.Switch;
+
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.android.application.R;
 
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
@@ -16,7 +21,7 @@ import java.nio.FloatBuffer;
 import javax.microedition.khronos.egl.EGLConfig;
 import javax.microedition.khronos.opengles.GL10;
 
-import edu.wuwang.opengl.R;
+ 
 import edu.wuwang.opengl.utils.MatrixUtils;
 import edu.wuwang.opengl.utils.ShaderUtils;
 
@@ -104,7 +109,7 @@ public class LightActivity extends AppCompatActivity implements GLSurfaceView.Re
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_light);
-        glView= (GLSurfaceView) findViewById(R.id.glView);
+        glView= findViewById(R.id.glView);
         glView.setEGLContextClientVersion(2);
         glView.setRenderer(this);
         glView.setRenderMode(GLSurfaceView.RENDERMODE_CONTINUOUSLY);

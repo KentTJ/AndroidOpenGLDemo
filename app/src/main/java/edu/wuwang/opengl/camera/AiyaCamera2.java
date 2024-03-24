@@ -26,9 +26,11 @@ import android.hardware.camera2.TotalCaptureResult;
 import android.os.Build;
 import android.os.Handler;
 import android.os.HandlerThread;
-import android.support.annotation.NonNull;
-import android.support.v4.app.ActivityCompat;
+//import android.support.annotation.NonNull;
+//import androidx.core.app.ActivityCompat;
 import android.view.Surface;
+
+import androidx.core.app.ActivityCompat;
 
 /**
  * Description:
@@ -115,7 +117,7 @@ public class AiyaCamera2 implements IAiyaCamera {
 
     private CameraDevice.StateCallback mStateCallback=new CameraDevice.StateCallback() {
         @Override
-        public void onOpened(@NonNull CameraDevice camera) {
+        public void onOpened(CameraDevice camera) {
             mCameraDevice=camera;
             try {
                 createCameraCaptureSession();
@@ -125,12 +127,12 @@ public class AiyaCamera2 implements IAiyaCamera {
         }
 
         @Override
-        public void onDisconnected(@NonNull CameraDevice camera) {
+        public void onDisconnected(CameraDevice camera) {
             mCameraDevice=null;
         }
 
         @Override
-        public void onError(@NonNull CameraDevice camera, int error) {
+        public void onError( CameraDevice camera, int error) {
 
         }
     };

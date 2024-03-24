@@ -24,14 +24,16 @@ import android.opengl.GLSurfaceView;
 import android.opengl.GLUtils;
 import android.os.Bundle;
 import android.provider.MediaStore;
-import android.support.annotation.Nullable;
+//import androidx.annotation.Nullable;  
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.android.application.R;
+
 import edu.wuwang.opengl.BaseActivity;
-import edu.wuwang.opengl.R;
+// 
 import edu.wuwang.opengl.fbo.FBOActivity;
 import edu.wuwang.opengl.fbo.FBORender;
 import edu.wuwang.opengl.filter.AFilter;
@@ -50,7 +52,7 @@ public class EGLBackEnvActivity extends BaseActivity {
     private GLES20BackEnv mBackEnv;
 
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_egl_back_env);
         mImage= (ImageView)findViewById(R.id.mImage);

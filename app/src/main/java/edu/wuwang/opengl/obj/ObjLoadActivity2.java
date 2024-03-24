@@ -4,8 +4,11 @@ import android.opengl.GLES20;
 import android.opengl.GLSurfaceView;
 import android.opengl.Matrix;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+//import androidx.appcompat.app.AppCompatActivity;
+
+import com.android.application.R;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -14,7 +17,7 @@ import java.util.List;
 import javax.microedition.khronos.egl.EGLConfig;
 import javax.microedition.khronos.opengles.GL10;
 
-import edu.wuwang.opengl.R;
+ 
 import edu.wuwang.opengl.utils.Gl2Utils;
 
 /**

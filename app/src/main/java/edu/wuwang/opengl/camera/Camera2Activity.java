@@ -36,9 +36,9 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.os.Handler;
 import android.os.HandlerThread;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.annotation.RequiresApi;
+//import android.support.annotation.NonNull;
+//import androidx.annotation.Nullable;  
+//import android.support.annotation.RequiresApi;
 import android.util.Size;
 import android.view.Surface;
 import android.view.SurfaceHolder;
@@ -47,7 +47,7 @@ import android.view.View;
 import android.widget.Toast;
 
 import edu.wuwang.opengl.BaseActivity;
-import edu.wuwang.opengl.R;
+// 
 import edu.wuwang.opengl.filter.GrayFilter;
 import edu.wuwang.opengl.filter.NoFilter;
 import edu.wuwang.opengl.filter.WaterMarkFilter;
@@ -55,6 +55,8 @@ import edu.wuwang.opengl.filter.ZipPkmAnimationFilter;
 import edu.wuwang.opengl.utils.PermissionUtils;
 
 import static android.hardware.camera2.CameraDevice.TEMPLATE_PREVIEW;
+
+import com.android.application.R;
 
 
 /**
@@ -68,7 +70,7 @@ public class Camera2Activity extends BaseActivity implements FrameCallback {
     private int cameraId = 1;
 
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         PermissionUtils.askPermission(this, new String[]{Manifest.permission.CAMERA, Manifest
             .permission.WRITE_EXTERNAL_STORAGE}, 10, initViewRunnable);
@@ -125,7 +127,7 @@ public class Camera2Activity extends BaseActivity implements FrameCallback {
     };
 
     @Override
-    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+    public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
         PermissionUtils.onRequestPermissionsResult(requestCode == 10, grantResults, initViewRunnable,
             new Runnable() {
@@ -139,7 +141,8 @@ public class Camera2Activity extends BaseActivity implements FrameCallback {
 
     public void onClick(View view){
         switch (view.getId()){
-            case R.id.mShutter:
+            case com.android.application.R.id.mShutter:
+
                 mController.takePhoto();
                 break;
         }
@@ -271,7 +274,7 @@ public class Camera2Activity extends BaseActivity implements FrameCallback {
 
     }
 
-    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
+//    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     private class Camera2Renderer implements Renderer {
 
         CameraDevice mDevice;

@@ -10,15 +10,17 @@ import android.opengl.GLU;
 import android.opengl.GLUtils;
 import android.opengl.Matrix;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
+//import androidx.annotation.Nullable;  
 import android.view.View;
 import android.widget.TextView;
+
+import com.android.application.R;
 
 import javax.microedition.khronos.egl.EGLConfig;
 import javax.microedition.khronos.opengles.GL10;
 
 import edu.wuwang.opengl.BaseActivity;
-import edu.wuwang.opengl.R;
+// 
 import edu.wuwang.opengl.filter.NoFilter;
 import edu.wuwang.opengl.utils.EasyGlUtils;
 import edu.wuwang.opengl.utils.MatrixUtils;
@@ -68,7 +70,7 @@ public class BlendActivity extends BaseActivity implements GLSurfaceView.Rendere
     };
 
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
+    protected void onCreate( Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_blend);
         mEqua= (TextView) findViewById(R.id.mEqua);

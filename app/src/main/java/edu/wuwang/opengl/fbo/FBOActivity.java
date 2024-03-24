@@ -22,14 +22,16 @@ import android.net.Uri;
 import android.opengl.GLSurfaceView;
 import android.os.Bundle;
 import android.provider.MediaStore;
-import android.support.annotation.Nullable;
+//import androidx.annotation.Nullable;  
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.android.application.R;
+
 import edu.wuwang.opengl.BaseActivity;
-import edu.wuwang.opengl.R;
+// 
 
 /**
  * Description:
@@ -44,7 +46,7 @@ public class FBOActivity extends BaseActivity implements FBORender.Callback {
     private String mImgPath;
 
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fbo);
         mGLView= (GLSurfaceView)findViewById(R.id.mGLView);

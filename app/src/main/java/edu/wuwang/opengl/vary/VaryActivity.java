@@ -2,10 +2,12 @@ package edu.wuwang.opengl.vary;
 
 import android.opengl.GLSurfaceView;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
+
+import com.android.application.R;
 
 import edu.wuwang.opengl.BaseActivity;
-import edu.wuwang.opengl.R;
+
 
 /**
  * Created by wuwang on 2016/10/30

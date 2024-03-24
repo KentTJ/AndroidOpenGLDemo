@@ -9,7 +9,7 @@ package edu.wuwang.opengl.image;
 import android.app.Activity;
 import android.opengl.GLSurfaceView;
 import android.os.Bundle;
-import android.support.v7.widget.PopupMenu;
+//import androidx.recyclerview.widget.PopupMenu;
 import android.view.ContextMenu;
 import android.view.Gravity;
 import android.view.Menu;
@@ -19,8 +19,10 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.android.application.R;
+
 import edu.wuwang.opengl.BaseActivity;
-import edu.wuwang.opengl.R;
+// 
 import edu.wuwang.opengl.image.filter.ColorFilter;
 import edu.wuwang.opengl.image.filter.ContrastColorFilter;
 

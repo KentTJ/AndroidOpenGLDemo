@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="edu.wuwang.opengl">
+<manifest xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    >
 
 
     <uses-feature android:glEsVersion="0x00020000" android:required="true"/>
@@ -17,46 +18,49 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity"
-            android:screenOrientation="portrait">
+        <activity
+            android:name="edu.wuwang.opengl.MainActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="Instantiatable"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".render.FGLViewActivity"
+        <activity android:name="edu.wuwang.opengl.render.FGLViewActivity"
             android:screenOrientation="portrait" >
         </activity>
-        <activity android:name=".ChooseActivity"
+        <activity android:name="edu.wuwang.opengl.ChooseActivity"
             android:screenOrientation="portrait">
         </activity>
-        <activity android:name=".image.SGLViewActivity"
+        <activity android:name="edu.wuwang.opengl.image.SGLViewActivity"
             android:screenOrientation="portrait">
         </activity>
-        <activity android:name=".vary.VaryActivity"
+        <activity android:name="edu.wuwang.opengl.vary.VaryActivity"
             android:screenOrientation="portrait">
         </activity>
-        <activity android:name=".camera.CameraActivity"
+        <activity android:name="edu.wuwang.opengl.camera.CameraActivity"
             android:screenOrientation="portrait"/>
-        <activity android:name=".camera.Camera2Activity"
+        <activity android:name="edu.wuwang.opengl.camera.Camera2Activity"
             android:screenOrientation="portrait"/>
-        <activity android:name=".camera.Camera3Activity"
+        <activity android:name="edu.wuwang.opengl.camera.Camera3Activity"
             android:screenOrientation="portrait"/>
-        <activity android:name=".etc.ZipActivity"
+        <activity android:name="edu.wuwang.opengl.etc.ZipActivity"
             android:screenOrientation="portrait" />
-        <activity android:name=".fbo.FBOActivity"
+        <activity android:name="edu.wuwang.opengl.fbo.FBOActivity"
             android:screenOrientation="portrait" />
-        <activity android:name=".egl.EGLBackEnvActivity"
+        <activity android:name="edu.wuwang.opengl.egl.EGLBackEnvActivity"
             android:screenOrientation="portrait"/>
-        <activity android:name=".obj.ObjLoadActivity"
+        <activity android:name="edu.wuwang.opengl.obj.ObjLoadActivity"
             android:screenOrientation="portrait" />
-        <activity android:name=".obj.ObjLoadActivity2"
+        <activity android:name="edu.wuwang.opengl.obj.ObjLoadActivity2"
             android:screenOrientation="portrait" />
-        <activity android:name=".vr.VrContextActivity"
+        <activity android:name="edu.wuwang.opengl.vr.VrContextActivity"
             android:screenOrientation="portrait"/>
-        <activity android:name=".blend.BlendActivity"
+        <activity android:name="edu.wuwang.opengl.blend.BlendActivity"
             android:screenOrientation="portrait" />
-        <activity android:name=".light.LightActivity"
+        <activity android:name="edu.wuwang.opengl.light.LightActivity"
             android:screenOrientation="portrait" />
     </application>
 

@@ -3,7 +3,11 @@ package edu.wuwang.opengl.obj;
 import android.opengl.GLSurfaceView;
 import android.opengl.Matrix;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
+//import androidx.annotation.Nullable;  
+
+import androidx.annotation.Nullable;
+
+import com.android.application.R;
 
 import java.io.IOException;
 
@@ -11,7 +15,7 @@ import javax.microedition.khronos.egl.EGLConfig;
 import javax.microedition.khronos.opengles.GL10;
 
 import edu.wuwang.opengl.BaseActivity;
-import edu.wuwang.opengl.R;
+ 
 import edu.wuwang.opengl.utils.Gl2Utils;
 
 /**

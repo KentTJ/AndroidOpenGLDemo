@@ -1,9 +1,13 @@
 package edu.wuwang.opengl.camera;
 
-import android.support.v7.widget.AppCompatSeekBar;
+//import androidx.recyclerview.widget.AppCompatSeekBar;
 import android.util.Log;
 import android.widget.SeekBar;
-import edu.wuwang.opengl.R;
+// 
+import androidx.appcompat.widget.AppCompatSeekBar;
+
+import com.android.application.R;
+
 import edu.wuwang.opengl.filter.Beauty;
 import edu.wuwang.opengl.filter.LookupFilter;
 
